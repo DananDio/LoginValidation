@@ -2,7 +2,6 @@
 import React, { Component } from 'react'
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import * as EmailValidator from 'email-validator';
 
 export default class ValidatedSignIn extends Component {
   render() {
@@ -25,17 +24,15 @@ export default class ValidatedSignIn extends Component {
                       .matches(/(?=.*[0-9])/, 'Password must contain a number.')
               })}
               >
-              {props => {
-      const {
-        values,
-        touched,
-        errors,
-        isSubmitting,
-        handleChange,
-        handleBlur,
-        handleSubmit
-      } = props;
-      return (
+              {({//this one is props()
+                  values,
+                  touched,
+                  errors,
+                  isSubmitting,
+                  handleChange,
+                  handleBlur,
+                  handleSubmit
+              })=>(//this starting the return
           <span className='border border-dark rounded ' id='formikgroup'>
         <form onSubmit={handleSubmit}>
           <label htmlFor="email">Email</label>
@@ -69,8 +66,7 @@ export default class ValidatedSignIn extends Component {
           </button>
               </form>
          </span>
-      );
-    }}
+              )}
         </Formik>
     )
   }

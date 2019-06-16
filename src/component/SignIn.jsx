@@ -31,7 +31,8 @@ export default class SignIn extends Component {
                       <input type="password" name="txtpassword" id="" required />
                   </div>
                   <input type="submit" value="Register" id='register'/>
-        </form>
+              </form>
+              
         </span>
     )
   }
