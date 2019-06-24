@@ -14,7 +14,7 @@ export default class ValidatedSignIn extends Component {
                       setSubmitting(false);
                   }, 500);
               }}
-              validationSchema={Yup.object().shape({
+              const validationSchema={Yup.object().shape({
                   email: Yup.string()
                       .email()
                       .required('Required'),
@@ -31,12 +31,15 @@ export default class ValidatedSignIn extends Component {
                   isSubmitting,
                   handleChange,
                   handleBlur,
-                  handleSubmit
+                handleSubmit,
+                handleReset,
+                  dirty
               })=>(//this starting the return
           <span className='border border-dark rounded ' id='formikgroup'>
         <form onSubmit={handleSubmit}>
           <label htmlFor="email">Email</label>
           <input
+            autoComplete="off"
             name="email"
             type="text"
             placeholder="Enter your email"
@@ -50,6 +53,7 @@ export default class ValidatedSignIn extends Component {
           )}
           <label htmlFor="email">Password</label>
           <input
+            
             name="password"
             type="password"
             placeholder="Enter your password"
@@ -61,9 +65,18 @@ export default class ValidatedSignIn extends Component {
           {errors.password && touched.password && (
             <div className="input-feedback">{errors.password}</div>
           )}
-          <button type="submit" disabled={isSubmitting} id='register'>
+          <button type="submit" disabled={!dirty && !isSubmitting} id='register'>
             Login
           </button>
+                  
+          <button
+  disabled={!dirty}
+  onClick={handleReset}
+  type="button"
+  className={'tes'}
+>
+  Reset
+</button>
               </form>
          </span>
               )}

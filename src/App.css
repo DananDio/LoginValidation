@@ -1,62 +1,73 @@
-  .wrapper {
-    width: 960px;
-    margin: 0 auto;
-    border-radius: 5px;
-    padding-right: 10px;
-    padding-left: 10px;
-    max-width: 960px;
-    font-family: 'system-ui';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    height: 100%;
-  }
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  max-width: 960px;
+  font-family: 'system-ui';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+}
 
-  .border {
-    padding: 10px;
-    width: 400px;
-  }
+.border {
+  padding: 10px;
+  width: 400px;
+}
 
-  input {
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px solid rgb(216, 216, 216);
-    width: 100%;
-  }
+input {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(216, 216, 216);
+  width: 100%;
+}
 
-  label {
-    margin: 5px;
-  }
+label {
+  margin: 5px;
+}
 
-  #register {
-    background-color: rgb(47, 204, 47);
-    border: 1px solid rgb(47, 204, 47);
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: auto;
-    width: 100%;
-    display: block;
-    border-radius: 5px;
-  }
+#register {
+  background-color: rgb(47, 204, 47);
+  border: 1px solid rgb(47, 204, 47);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: auto;
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
 
-  #register:hover {
-    background-color: rgb(66, 85, 70);
-    border: 1px solid rgb(66, 85, 70);
-  }
+#register:hover {
+  background-color: rgb(66, 85, 70);
+  border: 1px solid rgb(66, 85, 70);
+}
 
-  h2 {
-    text-align: center;
-  }
+h2 {
+  text-align: center;
+}
 
-  .input-feedback {
-    color: rgb(235, 54, 54);
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
+.input-feedback {
+  color: rgb(235, 54, 54);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 
-  #formikgroup {
-    margin: 0 auto;
-    min-height: 200px;
-  }
+#formikgroup {
+  margin: 0 auto;
+  min-height: 200px;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+input:focus {
+  border-color: rgb(79, 157, 226);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 0 3px rgba(0, 126, 255, 0.1);
+  outline: none;
+}

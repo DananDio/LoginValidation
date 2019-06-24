@@ -10,7 +10,8 @@ import ValidatedSignIn from './component/ValidatedSignIn';
 function App() {
   return (
     <div className="wrapper">
-    <ValidatedSignIn></ValidatedSignIn>
+      <ValidatedSignIn></ValidatedSignIn>
+      <a href="">donate here</a>
     </div>
 
 
